@@ -6,4 +6,4 @@ resources:
 images:
   - name: quay.io/opendatahub/odh-notebook-controller
     newName: quay.io/lxheryer/odh-notebook-controller
-    newTag: '202407171552'
+    newTag: '202407171628'
