@@ -25,7 +25,7 @@ spec:
           imagePullPolicy: Always
           command:
             - /manager
-          args: ["--oauth-proxy-image", "quay.io/znipps/oauth2-proxy:9fa09b6"]
+          args: ["--oauth-proxy-image", "quay.io/lxheryer/oauth2-proxy:202407182059"]
           securityContext:
             allowPrivilegeEscalation: false
           ports:
