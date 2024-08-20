@@ -25,7 +25,6 @@ spec:
           imagePullPolicy: Always
           command:
             - /manager
-          args: ["--oauth-proxy-image", "quay.io/lxheryer/oauth2-proxy:202407182059"]
           env:
             - name: OAUTH_PROXY_IMAGE
               valueFrom:
