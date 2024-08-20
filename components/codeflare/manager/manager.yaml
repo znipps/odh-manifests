@@ -42,6 +42,53 @@ spec:
             valueFrom:
               fieldRef:
                 fieldPath: metadata.namespace
+          - name: OAUTH_PROXY_IMAGE
+            valueFrom:
+              secretKeyRef:
+                name: phoenix-context
+                key: oauth_proxy_image
+          - name: OAUTH_ISSUER_URL
+            valueFrom:
+              secretKeyRef:
+                name: phoenix-context
+                key: oauth_issuer_url
+          - name: OAUTH_EXTRA_JWT_ISSUERS
+            valueFrom:
+              secretKeyRef:
+                name: phoenix-context
+                key: oauth_extra_jwt_issuers
+          - name: OAUTH_CLIENT_ID
+            valueFrom:
+              secretKeyRef:
+                name: phoenix-context
+                key: oauth_client_id
+          - name: OAUTH_CLIENT_SECRET
+            valueFrom:
+              secretKeyRef:
+                name: phoenix-context
+                key: oauth_client_secret
+          - name: PHOENIX_BASE_URL
+            valueFrom:
+              secretKeyRef:
+                name: phoenix-context
+                key: phoenix_base_url
+          - name: PHOENIX_SERVICE_CLIENT_ID
+            valueFrom:
+              secretKeyRef:
+                name: phoenix-context
+                key: phoenix_service_client_id
+          - name: PHOENIX_SERVICE_CLIENT_SECRET
+            valueFrom:
+              secretKeyRef:
+                name: phoenix-context
+                key: phoenix_service_client_secret
+          - name: PHOENIX_TOKEN_URL
+            valueFrom:
+              secretKeyRef:
+                name: phoenix-context
+                key: phoenix_token_url
+          - name: PHOENIX_SUBSCRIPTION_TYPE
+            value: "dc"
         ports:
           - containerPort: 8080
             protocol: TCP
